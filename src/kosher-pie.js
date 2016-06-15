@@ -9,13 +9,13 @@ ko.components.register("kosher-pie", {
     var options = extend(defaults, params);
 
 
-    self.slices = observifyArray(options.slices);
+    self.data = observifyArray(options.data);
     self.size = observify(options.size);
 
-    self.slicesSum = ko.computed(function(){
+    self.dataSum = ko.computed(function(){
       var sum = 0;
-      for(var i = 0; i <self.slices().length; i ++){
-        sum += parseInt(self.slices()[i]());
+      for(var i = 0; i <self.data().length; i ++){
+        sum += parseInt(self.data()[i]());
       }
       return sum;
     });
@@ -26,7 +26,7 @@ ko.components.register("kosher-pie", {
 
     self.b = ko.computed(function(){ return 2 * Math.PI * self.r() });
     self.a = ko.computed(function(){
-      return (self.b() * self.slices()[1]()) / self.slicesSum();
+      return (self.b() * self.data()[1]()) / self.dataSum();
     });
 
     self.fill = options.fill;

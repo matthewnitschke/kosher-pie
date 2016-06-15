@@ -11,20 +11,25 @@
 </head>
 <body>
 
-  <kosher-pie params="{ size: size, slices: [100, percentage], colors: ['green'], fill: 'red' }"></kosher-pie>
+  <kosher-pie params="{ size: size, data: [value1, value2], colors: ['green'], fill: 'red' }"></kosher-pie>
   <br>
   <br>
   Size:
   <input type="text" data-bind="textInput: size">
   <br>
   <br>
-  Percentage:
-  <input type="text" data-bind="textInput: percentage">
+  value1:
+  <input type="text" data-bind="textInput: value1">
+  <br>
+  <br>
+  value2:
+  <input type="text" data-bind="textInput: value2">
 
   <script>
     function vm(){
       var self = this;
-      self.percentage = ko.observable(50);
+      self.value1 = ko.observable(50);
+      self.value2 = ko.observable(50);
       self.size = ko.observable(200);
     }
     ko.applyBindings(new vm());
