@@ -4,7 +4,7 @@ A knockout js pi chart component. CSS and HTML from [Lea Verou](https://www.smas
 # Installation
 ```html
 <script src='/path/to/knockout.js'></script>
-<script src='/path/to/ko-pi-chart.js'></script>
+<script src='/path/to/kosher-pie.js'></script>
 ```
 
 # Usage
@@ -17,10 +17,10 @@ Current parameters:
 
 | Name | Type | Required | Explanation |
 |------|------|----------|-------------|
-| size | int  | true     | The size in px of the pie chart |
-| slices | array (of integers) | true | values that are represented in the pie chart |
-| fill | string |      | the fill color of the chart |
-| colors | array (of strings) |      | the colors of the pie slices |
+| size | Number  | true     | The size in px of the pie chart |
+| slices | Array<Number> | true | values that are represented in the pie chart |
+| fill | String |      | the fill color of the chart |
+| colors | Array<String> |      | the colors of the pie slices |
 
 All parameters can be constants
 ```html
