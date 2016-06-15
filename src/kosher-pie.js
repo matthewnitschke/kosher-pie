@@ -29,5 +29,17 @@ ko.components.register("kosher-pie", {
          return a;
      }
   },
-  template: {element: 'kosher-pie-template'}
+  template: "<div class=\"kosher-pie__wrapper\">\
+               <svg data-bind=\"attr: {width: ko.unwrap(size), height: ko.unwrap(size) }\" class=\"kosher-pie__\">\
+                 <circle class=\"kosher-pie__\" data-bind=\"attr: {\
+                   r: r(),\
+                   cx: c(),\
+                   cy: c(),\
+                   style: 'stroke-dasharray: ' + a() + ' ' + b() +\
+                          ';stroke-width: ' + strokeWidth() +\
+                          ';fill: ' + ko.unwrap(fill) +\
+                          ';stroke: ' + ko.unwrap(stroke)\
+                 }\"></circle>\
+               </svg>\
+             </div>"
 });
