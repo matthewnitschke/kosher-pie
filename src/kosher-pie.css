@@ -3,10 +3,6 @@
 }
 
 circle.kosher-pie__ {
-  fill: #ddd;
-  stroke: #0074d9;
-  stroke-width: 50;
-  stroke-dasharray: 0 158;
   -webkit-transition: stroke-dasharray .3s ease;
   transition: stroke-dasharray .3s ease;
 }

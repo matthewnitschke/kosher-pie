@@ -18,16 +18,24 @@
           r: r(),
           cx: c(),
           cy: c(),
-          style: 'stroke-dasharray: ' + a() + ' ' + b() + ';stroke-width: ' + strokeWidth()
+          style: 'stroke-dasharray: ' + a() + ' ' + b() +
+                 ';stroke-width: ' + strokeWidth() +
+                 ';fill: ' + ko.unwrap(fill) +
+                 ';stroke: ' + ko.unwrap(stroke)
         }"></circle>
       </svg>
     </div>
   </script>
 
-  <kosher-pie params="{ size: size, percentage: percentage}"></kosher-pie>
-
-  <input type="text" data-bind="textInput: percentage">
+  <kosher-pie params="{ size: size, percentage: percentage, color1: 'green', color2: 'red' }"></kosher-pie>
+  <br>
+  <br>
+  Size:
   <input type="text" data-bind="textInput: size">
+  <br>
+  <br>
+  Percentage:
+  <input type="text" data-bind="textInput: percentage">
 
   <script>
     function vm(){
