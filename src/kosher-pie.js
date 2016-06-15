@@ -1,5 +1,3 @@
-// Test
-
 ko.components.register("kosher-pie", {
   viewModel: function(params){
 
