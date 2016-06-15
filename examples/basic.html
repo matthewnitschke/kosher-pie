@@ -1,1 +1,41 @@
-html:5
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pie Chart</title>
+
+  <link rel="stylesheet" href="../src/ko-pi-chart.css">
+
+  <script src="../node_modules/knockout/build/output/knockout-latest.js"></script>
+  <script src="../src/ko-pi-chart.js"></script>
+</head>
+<body>
+
+  <script type="text/html" id="pi-chart-template">
+    <div class="pi-chart-wrapper">
+      <svg data-bind="attr: {width: ko.unwrap(size), height: ko.unwrap(size) }" class="pi-chart">
+        <circle class="pie" data-bind="attr: {
+          r: r(),
+          cx: c(),
+          cy: c(),
+          style: 'stroke-dasharray: ' + a() + ' ' + b() + ';stroke-width: ' + strokeWidth()
+        }"></circle>
+      </svg>
+    </div>
+  </script>
+
+  <pi-chart params="{ size: size, percentage: percentage}"></pi-chart>
+
+  <input type="text" data-bind="textInput: percentage">
+  <input type="text" data-bind="textInput: size">
+
+  <script>
+    function vm(){
+      var self = this;
+      self.percentage = ko.observable(50);
+      self.size = ko.observable(200);
+    }
+    ko.applyBindings(new vm());
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+.pi-chart-wrapper{
+  display: block;
+}
+
+.pi-chart{
+  display: inline-block;
+}
+
+circle {
+  fill: #ddd;
+  stroke: #0074d9;
+  stroke-width: 50;
+  stroke-dasharray: 0 158;
+  -webkit-transition: stroke-dasharray .3s ease;
+  transition: stroke-dasharray .3s ease;
+}
+
+svg {
+  margin: 0 auto;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  background: #ddd;
+  border-radius: 50%;
+  display: block;
+}
