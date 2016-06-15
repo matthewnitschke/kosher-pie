@@ -18,9 +18,9 @@ Current parameters:
 | Name | Type | Required | Explanation |
 |------|------|----------|-------------|
 | size | Number  | true     | The size in px of the pie chart |
-| slices | Array<Number> | true | values that are represented in the pie chart |
+| slices | Array\<Number\> | true | values that are represented in the pie chart |
 | fill | String |      | the fill color of the chart |
-| colors | Array<String> |      | the colors of the pie slices |
+| colors | Array\<String\> |      | the colors of the pie slices |
 
 All parameters can be constants
 ```html
