@@ -8,24 +8,59 @@ ko.components.register("kosher-pie", {
 
     var options = extend(defaults, params);
 
-    self.percentage = options.percentage;
-    self.size = options.size;
 
-    self.r = ko.computed(function(){ return ko.unwrap(self.size) / 2 });
+    self.slices = observifyArray(options.slices);
+    self.size = observify(options.size);
+
+    self.slicesSum = ko.computed(function(){
+      var sum = 0;
+      for(var i = 0; i <self.slices().length; i ++){
+        sum += parseInt(self.slices()[i]());
+      }
+      return sum;
+    });
+
+
+    self.r = ko.computed(function(){ return self.size() / 2 });
+    self.strokeWidth = ko.computed(function(){ return self.size() });
+
     self.b = ko.computed(function(){ return 2 * Math.PI * self.r() });
-    self.a = ko.computed(function(){ return self.b() * (ko.unwrap(self.percentage) * .01) });
+    self.a = ko.computed(function(){
+      return (self.b() * self.slices()[1]()) / self.slicesSum();
+    });
 
 
-    self.strokeWidth = ko.computed(function(){return ko.unwrap(self.size) });
+
     self.fill = options.color1;
     self.stroke = options.color2;
 
 
     function extend(a, b) {
-         for (var key in b)
-             if (b.hasOwnProperty(key))
-                 a[key] = b[key];
+         for (var key in b){
+             if (b.hasOwnProperty(key)){
+                   a[key] = b[key];
+             }
+        }
          return a;
+     }
+
+     function observifyArray(arr){
+       for(var i = 0; i < ko.unwrap(arr).length; i ++){
+         ko.unwrap(arr)[i] = observify(ko.unwrap(arr)[i]);
+       }
+       if (ko.isObservable(arr) && 'push' in arr){
+         return arr;
+       } else {
+         return ko.observableArray(arr);
+       }
+     }
+
+     function observify(value){
+       if (ko.isObservable(value)){
+         return value;
+       } else {
+         return ko.observable(value);
+       }
      }
   },
   template: "<div class=\"kosher-pie__wrapper\">\

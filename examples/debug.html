@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="../src/kosher-pie.css">
+  <script src="../node_modules/knockout/build/output/knockout-latest.js"></script>
+
+</head>
+<body>
+  <div class="kosher-pie__wrapper">
+    <svg data-bind="attr: {width: size(), height: size() }" class="kosher-pie__">
+      <circle class="kosher-pie__" data-bind="attr: {
+        r: r(),
+        cx: r(),
+        cy: r(),
+        style: 'stroke-dasharray: ' + a() + ' ' + b() +
+          ';stroke-width: ' + strokeWidth() +
+          ';fill: ' + '#ddd' +
+          ';stroke: ' + '#0074d9'
+      }"></circle>
+    </svg>
+   </div>
+
+   <div>
+     size: <input type="text" data-bind="textInput: size">
+   </div>
+
+  <div>
+    a: <span data-bind="text: a"></span>
+  </div>
+  <div>
+    b: <span data-bind="text: b"></span>
+  </div>
+  <div>
+    r: <span data-bind="text: r"></span>
+  </div>
+  <div>
+    stroke width: <span data-bind="text: strokeWidth"></span>
+  </div>
+
+ <script>
+  function vm(){
+    var self = this;
+
+    self.value1 = ko.observable();
+    self.value2 = ko.observable();
+
+    var values = [54, 72];
+
+    self.valuesSum = ko.computed(function(){
+      var ret = 0;
+      for(var i = 0; i < values.length; i ++){
+        ret+=ko.unwrap(values[i]);
+      }
+      return ret;
+    })
+
+    self.size = ko.observable(200);
+    self.r = ko.computed(function(){return self.size()/2});
+    self.strokeWidth = ko.computed(function(){return self.size()});
+
+    self.b = ko.computed(function(){ return 2 * Math.PI * self.r() });
+
+    self.a = ko.computed(function(){
+      return (self.b() * ko.unwrap(values[1])) / self.valuesSum();
+    });
+
+
+
+  }
+
+  ko.applyBindings(new vm());
+ </script>
+</body>
+</html>
