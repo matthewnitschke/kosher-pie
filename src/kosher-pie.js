@@ -15,12 +15,10 @@ ko.components.register("kosher-pie", {
     self.b = ko.computed(function(){ return 2 * Math.PI * self.r() });
     self.a = ko.computed(function(){ return self.b() * (ko.unwrap(self.percentage) * .01) });
 
-
     self.strokeWidth = ko.computed(function(){return ko.unwrap(self.size) });
-    self.fill = options.color1;
-    self.stroke = options.color2;
-
-
+    self.stroke = options.color1;
+    self.fill = options.color2;
+    
     function extend(a, b) {
          for (var key in b)
              if (b.hasOwnProperty(key))
