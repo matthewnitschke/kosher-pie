@@ -8,9 +8,9 @@ A knockout js pi chart component. CSS and HTML from [Lea Verou](https://www.smas
 ```
 
 # Usage
-Its a knockout js component, so add it to you html like so
+It's a knockout js component, so add it to you html like so
 ```html
-<kosher-pie params="{size: 200, percentage: 50}"></kosher-pie>
+<kosher-pie params="{ size: 200, percentage: 50 }"></kosher-pie>
 ```
 
 Current parameters:
@@ -24,11 +24,11 @@ Current parameters:
 
 All parameters can be constants
 ```html
-<kosher-pie params="{size: 200, percentage: 50}"></kosher-pie>
+<kosher-pie params="{ size: 200, percentage: 50 }"></kosher-pie>
 ```
 or observables
 ```html
-<kosher-pie params="{size: sizeOfChart, percentage: currentPercentage}"></kosher-pie>
+<kosher-pie params="{ size: sizeOfChart, percentage: currentPercentage }"></kosher-pie>
 ```
 
 Please see examples folder for working example
