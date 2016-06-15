@@ -2,8 +2,8 @@ ko.components.register("kosher-pie", {
   viewModel: function(params){
 
     var defaults = {
-      color1: "#ddd",
-      color2: "#0074d9"
+      fill: "#ddd",
+      colors: ["#0074d9"]
     }
 
     var options = extend(defaults, params);
@@ -29,10 +29,8 @@ ko.components.register("kosher-pie", {
       return (self.b() * self.slices()[1]()) / self.slicesSum();
     });
 
-
-
-    self.fill = options.color1;
-    self.stroke = options.color2;
+    self.fill = options.fill;
+    self.stroke = options.colors[0];
 
 
     function extend(a, b) {
