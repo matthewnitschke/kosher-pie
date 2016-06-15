@@ -12,7 +12,6 @@ ko.components.register("kosher-pie", {
     self.size = options.size;
 
     self.r = ko.computed(function(){ return ko.unwrap(self.size) / 2 });
-    self.c = ko.computed(function(){ return ko.unwrap(self.size) / 2 });
     self.b = ko.computed(function(){ return 2 * Math.PI * self.r() });
     self.a = ko.computed(function(){ return self.b() * (ko.unwrap(self.percentage) * .01) });
 
@@ -33,8 +32,8 @@ ko.components.register("kosher-pie", {
                <svg data-bind=\"attr: {width: ko.unwrap(size), height: ko.unwrap(size) }\" class=\"kosher-pie__\">\
                  <circle class=\"kosher-pie__\" data-bind=\"attr: {\
                    r: r(),\
-                   cx: c(),\
-                   cy: c(),\
+                   cx: r(),\
+                   cy: r(),\
                    style: 'stroke-dasharray: ' + a() + ' ' + b() +\
                           ';stroke-width: ' + strokeWidth() +\
                           ';fill: ' + ko.unwrap(fill) +\
