@@ -4,17 +4,17 @@
   <meta charset="UTF-8">
   <title>Pie Chart</title>
 
-  <link rel="stylesheet" href="../src/ko-pi-chart.css">
+  <link rel="stylesheet" href="../src/kosher-pie.css">
 
   <script src="../node_modules/knockout/build/output/knockout-latest.js"></script>
-  <script src="../src/ko-pi-chart.js"></script>
+  <script src="../src/kosher-pie.js"></script>
 </head>
 <body>
 
-  <script type="text/html" id="pi-chart-template">
-    <div class="pi-chart-wrapper">
-      <svg data-bind="attr: {width: ko.unwrap(size), height: ko.unwrap(size) }" class="pi-chart">
-        <circle class="pie" data-bind="attr: {
+  <script type="text/html" id="kosher-pie-template">
+    <div class="kosher-pie__wrapper">
+      <svg data-bind="attr: {width: ko.unwrap(size), height: ko.unwrap(size) }" class="kosher-pie__">
+        <circle class="kosher-pie__" data-bind="attr: {
           r: r(),
           cx: c(),
           cy: c(),
@@ -24,7 +24,7 @@
     </div>
   </script>
 
-  <pi-chart params="{ size: size, percentage: percentage}"></pi-chart>
+  <kosher-pie params="{ size: size, percentage: percentage}"></kosher-pie>
 
   <input type="text" data-bind="textInput: percentage">
   <input type="text" data-bind="textInput: size">

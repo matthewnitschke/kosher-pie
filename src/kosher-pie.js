@@ -1,4 +1,4 @@
-ko.components.register("pi-chart", {
+ko.components.register("kosher-pie", {
   viewModel: function(params){
 
     self.percentage = params.percentage;
@@ -15,5 +15,5 @@ ko.components.register("pi-chart", {
 
     self.strokeWidth = ko.computed(function(){return ko.unwrap(self.size) });
   },
-  template: {element: 'pi-chart-template'}
+  template: {element: 'kosher-pie-template'}
 });

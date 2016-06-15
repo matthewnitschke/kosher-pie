@@ -1,12 +1,8 @@
-.pi-chart-wrapper{
+.kosher-pie__wrapper{
   display: block;
 }
 
-.pi-chart{
-  display: inline-block;
-}
-
-circle {
+circle.kosher-pie__ {
   fill: #ddd;
   stroke: #0074d9;
   stroke-width: 50;
@@ -15,11 +11,11 @@ circle {
   transition: stroke-dasharray .3s ease;
 }
 
-svg {
+svg.kosher-pie__  {
   margin: 0 auto;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   background: #ddd;
   border-radius: 50%;
-  display: block;
+  display: inline-block;
 }
