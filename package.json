@@ -1,0 +1,26 @@
+{
+  "name": "kosher-pie",
+  "version": "1.0.0",
+  "description": "A knockout js pi chart component. CSS and HTML from [Lea Verou](https://www.smashingmagazine.com/2015/07/designing-simple-pie-charts-with-css/)",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "dependencies": {
+    "knockout": "^3.4.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewnitschke/kosher-pie.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matthewnitschke/kosher-pie/issues"
+  },
+  "homepage": "https://github.com/matthewnitschke/kosher-pie#readme"
+}
