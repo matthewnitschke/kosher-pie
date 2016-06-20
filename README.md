@@ -34,4 +34,4 @@ Please see examples folder for working example
 
 
 # Limitations
-Only one pie slice is currently availible. I want to change this.
+Only one pie slice is currently availible. I want to change this. Please see the Multi-Slices branch for current status on this
