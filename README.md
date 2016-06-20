@@ -19,7 +19,6 @@ Current parameters:
 |------|------|----------|-------------|
 | size | Number  | true     | The size in px of the pie chart |
 | data | Array\<Number\> | true | values that are represented in the pie chart |
-| fill | String |      | the fill color of the chart |
 | colors | Array\<String\> |      | the colors of the pie slices |
 
 All parameters can be constants
