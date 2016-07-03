@@ -10,28 +10,15 @@ A knockout js pi chart component. CSS and HTML from [Lea Verou](https://www.smas
 # Usage
 It's a knockout js component, so add it to you html like so
 ```html
-<kosher-pie params="{ size: 200, data: [50, 100] }"></kosher-pie>
+<kosher-pie params="{ data: [50, 100] }"></kosher-pie>
 ```
 
 Current parameters:
 
 | Name | Type | Required | Explanation |
 |------|------|----------|-------------|
-| size | Number  | true     | The size in px of the pie chart |
 | data | Array\<Number\> | true | values that are represented in the pie chart |
 | colors | Array\<String\> |      | the colors of the pie slices |
 
-All parameters can be constants
-```html
-<kosher-pie params="{ size: 200, data: [200, 30] }"></kosher-pie>
-```
-or observables
-```html
-<kosher-pie params="{ size: sizeOfChart, data: [value1, value2] }"></kosher-pie>
-```
 
 Please see examples folder for working example
-
-
-# Limitations
-Only one pie slice is currently availible. I want to change this. Please see the Multi-Slices branch for current status on this
