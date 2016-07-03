@@ -10,29 +10,13 @@
   <script src="../src/kosher-pie.js"></script>
 </head>
 <body>
-
-  <kosher-pie params="{ size: size, data: [value1, value2], colors: ['green'], fill: 'red' }"></kosher-pie>
-  <br>
-  <br>
-  Size:
-  <input type="text" data-bind="textInput: size">
-  <br>
-  <br>
-  value1:
-  <input type="text" data-bind="textInput: value1">
-  <br>
-  <br>
-  value2:
-  <input type="text" data-bind="textInput: value2">
+  <div style="max-width: 10rem;">
+    <kosher-pie params="{ data: [50, 50, 50, 50], colors: ['green', 'yellow', 'pink', 'grey']}"></kosher-pie>
+  </div>
 
   <script>
-    function vm(){
-      var self = this;
-      self.value1 = ko.observable(50);
-      self.value2 = ko.observable(50);
-      self.size = ko.observable(200);
-    }
-    ko.applyBindings(new vm());
+
+    ko.applyBindings();
   </script>
 </body>
 </html>

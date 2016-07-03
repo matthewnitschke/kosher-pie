@@ -1,17 +1,12 @@
-.kosher-pie__wrapper{
-  display: block;
-}
 
-circle.kosher-pie__ {
-  -webkit-transition: stroke-dasharray .3s ease;
-  transition: stroke-dasharray .3s ease;
-}
 
-svg.kosher-pie__  {
-  margin: 0 auto;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  background: #ddd;
-  border-radius: 50%;
-  display: inline-block;
-}
+	svg {
+			width: 100px height: 100px;
+			transform: rotate(-90deg);
+			border-radius: 50%;
+		}
+
+		circle {
+			fill: none;
+			stroke-width: 32;
+		}
