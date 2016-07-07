@@ -1,4 +1,5 @@
-![capture](https://cloud.githubusercontent.com/assets/6363089/16640860/e0a1e216-43b8-11e6-8606-1b36fd974f1e.png)
+![capture](https://cloud.githubusercontent.com/assets/6363089/16640890/1569930e-43b9-11e6-8805-671a8dd93f5c.png)
+
 
 
 # Kosher Pie
