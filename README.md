@@ -5,6 +5,8 @@
 # Kosher Pie
 A knockout js pi chart component. CSS and HTML from [Lea Verou](https://www.smashingmagazine.com/2015/07/designing-simple-pie-charts-with-css/)
 
+[Demo and API](https://matthewnitschke.github.io/kosher-pie/)
+
 # Installation
 ```html
 <script src='/path/to/knockout.js'></script>
