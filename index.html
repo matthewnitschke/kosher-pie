@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+  <title>Component Page</title>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-debug.js"></script>
+
+  <link rel="stylesheet" href="https://matthewnitschke.github.io/ko-component-page/dist/ko-component-page.css">
+  <script src="https://matthewnitschke.github.io/ko-component-page/dist/ko-component-page.js"></script>
+
+  <script src="src/kosher-pie.js"></script>
+  <link rel="stylesheet" href="src/kosher-pie.css">
+</head>
+
+<body>
+  <ko-component-page params="{componentName: 'kosher-pie'}">
+
+    <ko-component-parameters>
+      <ko-component-parameter required params="{name: 'data', type: 'Array<Int> or Array<Observable>', description: 'data set to be represented in the pie chart'}"></ko-component-parameter>
+      <ko-component-parameter params="{name: 'colors', type: 'Array<String>', description: 'Pie slice colors'}"></ko-component-parameter>
+    </ko-component-parameters>
+
+    <ko-component-examples>
+
+      <ko-component-example params="{label: 'Basic', description: ''}">
+        <div style="max-width: 10rem;">
+          <kosher-pie params="{ data: myData, colors: myColors}"></kosher-pie>
+        </div>
+        <ko-component-example-script>
+          {
+            myData: [50, 50, 50, 50],
+            myColors: ['green', 'yellow', 'pink', 'grey']
+          }
+        </ko-component-example-script>
+      </ko-component-example>
+
+    </ko-component-examples>
+
+  </ko-component-page>
+
+  <script>
+    ko.applyBindings();
+  </script>
+</body>
+
+</html>
